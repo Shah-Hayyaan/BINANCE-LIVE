@@ -58,7 +58,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get("REDIS_URL", "rediss://:AUoQAAIjcDE0NDc4NjZlZWY2YTA0NmMxYWI1ODc1NGUyZjY2NzJmMXAxMA@hopeful-jackal-18960.upstash.io:6379")],  # Ensure Redis is running
+            "hosts": [os.environ.get("REDIS_URL", "redis://:AUoQAAIjcDE0NDc4NjZlZWY2YTA0NmMxYWI1ODc1NGUyZjY2NzJmMXAxMA@hopeful-jackal-18960.upstash.io:6379")],  # Ensure Redis is running
         },
     },
 }
