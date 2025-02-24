@@ -5,7 +5,7 @@ const WebSocketComponent = () => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = new WebSocket("ws://websocketapp-y72k.onrender.com/ws/binance/");
+    socketRef.current = new WebSocket("wss://websocketapp-y72k.onrender.com/ws/binance/");
     //socketRef.current = new WebSocket("ws://127.0.0.1:8000/ws/binance/");
     // socketRef.current = new WebSocket("wss://websocketapp-y72k.onrender.com/ws/binance/");
     //socketRef.current = new WebSocket("wss://websocketapp-y72k.onrender.com:8000/ws/binance/");
