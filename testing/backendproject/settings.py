@@ -16,7 +16,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-+f&skilipn2a$7$u0&7
 DEBUG = True
 
 # Allowed Hosts
-ALLOWED_HOSTS = ['localhost','binance-live.onrender.com','*','127.0.0.1']
+ALLOWED_HOSTS = ['localhost','binance-live.onrender.com','*','127.0.0.1','binance-stream.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -58,7 +58,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get("REDIS_URL", "redis://:AUoQAAIjcDE0NDc4NjZlZWY2YTA0NmMxYWI1ODc1NGUyZjY2NzJmMXAxMA@hopeful-jackal-18960.upstash.io:6379")],  # Ensure Redis is running
+            "hosts": [os.environ.get("REDIS_URL","redis://red-cuu4tlnnoe9s73d29pl0:6379")],  # Ensure Redis is running
         },
     },
 }
@@ -67,13 +67,14 @@ CHANNEL_LAYERS = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    '*', 'https://binance-stream.onrender.com',
+    'https://binance-stream.onrender.com',
     'https://binance-live.onrender.com',
-    'rediss://:AUoQAAIjcDE0NDc4NjZlZWY2YTA0NmMxYWI1ODc1NGUyZjY2NzJmMXAxMA@hopeful-jackal-18960.upstash.io:6379'
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^http://localhost:[0-9]+$","https://binance-live.onrender.com","https://binance-stream.onrender.com"
+    r"^http://localhost:[0-9]+$",
+    r"^https://binance-live\.onrender\.com$",
+    r"^https://binance-stream\.onrender\.com$",
 ]
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
