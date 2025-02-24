@@ -16,7 +16,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-+f&skilipn2a$7$u0&7
 DEBUG = True
 
 # Allowed Hosts
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost','binance-live.onrender.com','*','127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
