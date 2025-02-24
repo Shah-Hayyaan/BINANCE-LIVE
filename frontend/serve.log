@@ -1,0 +1,14 @@
+nohup: ignoring input
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 304 in 63 ms
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /static/css/main.5ecd60fb.chunk.css
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /static/js/2.ae026ab9.chunk.js
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /static/js/main.8bfdc340.chunk.js
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 304 in 11 ms
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 304 in 11 ms
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 304 in 9 ms
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /logo192.png
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 GET /favicon.ico
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 200 in 18 ms
+ HTTP  2/22/2025 11:43:08 PM 127.0.0.1 Returned 200 in 25 ms

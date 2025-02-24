@@ -1,0 +1,6 @@
+nohup: ignoring input
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  2/20/2025 4:11:13 PM 127.0.0.1 GET /
+ HTTP  2/20/2025 4:11:13 PM 127.0.0.1 Returned 200 in 65 ms
+ HTTP  2/20/2025 4:11:18 PM 127.0.0.1 GET /
+ HTTP  2/20/2025 4:11:18 PM 127.0.0.1 Returned 200 in 9 ms
