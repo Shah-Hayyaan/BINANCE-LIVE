@@ -74,38 +74,10 @@ const WebSocketComponent = () => {
   }, []);
   
   const formatDecimal = (value) => (value ? parseFloat(value).toFixed(2) : "0.00");
-  
-  const getStatusColor = () => {
-    switch(connectionStatus) {
-      case "connected": return "green";
-      case "connecting": return "orange";
-      case "disconnected": return "red";
-      case "error": return "darkred";
-      default: return "gray";
-    }
-  };
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h1 style={{ textAlign: "center" }}>Live Binance Data</h1>
-      <div style={{ 
-        textAlign: "center", 
-        marginBottom: "20px", 
-        padding: "10px", 
-        backgroundColor: getStatusColor(), 
-        color: "white", 
-        borderRadius: "5px" 
-      }}>
-        WebSocket Status: {connectionStatus.toUpperCase()}
-        {connectionStatus === "disconnected" && (
-          <button 
-            onClick={connectWebSocket}
-            style={{ marginLeft: "10px", padding: "5px 10px" }}
-          >
-            Reconnect Now
-          </button>
-        )}
-      </div>
       
       <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid black" }}>
         <thead>
