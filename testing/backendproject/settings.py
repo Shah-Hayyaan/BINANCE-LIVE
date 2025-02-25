@@ -16,7 +16,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-+f&skilipn2a$7$u0&7
 DEBUG = True
 
 # Allowed Hosts
-ALLOWED_HOSTS = ['localhost','binance-live.onrender.com','*','127.0.0.1','binance-stream.onrender.com']
+ALLOWED_HOSTS = ['localhost', 'binance-live.onrender.com', '*', '127.0.0.1', 'binance-stream.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -58,7 +58,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get("REDIS_URL","redis://red-cuuvck56l47c73edlom0:6379")],  # Ensure Redis is running
+            "hosts": [os.environ.get("REDIS_URL", "redis://red-cuuvck56l47c73edlom0:6379")],  # Ensure Redis is running
         },
     },
 }
@@ -80,18 +80,35 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 CORS_ALLOW_CREDENTIALS = True
 
-# Static and Media Files
+# ✅ Fixed: Django Admin Templates Configuration
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],  # Ensure you have a 'templates' folder
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+# ✅ Fixed: Static and Media Files
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'static'] if (BASE_DIR / 'static').exists() else []
 MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# Logging Configuration
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
