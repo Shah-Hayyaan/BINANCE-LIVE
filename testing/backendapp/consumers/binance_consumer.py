@@ -60,7 +60,7 @@ class BinanceConsumer(AsyncWebsocketConsumer):
             
         except Exception as e:
             logger.exception("Error during connection setup: %s", e)
-            await self.close(code=1011)  # 1011 = Internal Error
+            await self.close(code=3000)  # 1011 = Internal Error
 
     async def disconnect(self, close_code):
         logger.info(f"WebSocket disconnecting with code: {close_code}")
