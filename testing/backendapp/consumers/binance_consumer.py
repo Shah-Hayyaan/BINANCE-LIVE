@@ -37,7 +37,7 @@ class BinanceConsumer(AsyncWebsocketConsumer):
             self.tasks.append(self.heartbeat_task)
             
             # Initialize Binance client with additional timeout
-            self.client = await AsyncClient.create(request_timeout=30)
+            self.client = await AsyncClient.create()
             self.bm = BinanceSocketManager(self.client)
             
             # Start background tasks
